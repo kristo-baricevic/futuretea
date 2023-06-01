@@ -7,17 +7,40 @@
     <style>
     /* Custom styles for the carousel */
     .carousel {
-    height: 800px;
+    height: 200px;
     }
 
     .carousel-cell {
-    height: 800px; /* Set the height of each carousel cell */
+    position: relative;
+    width: 33.33%;
+    height: 200px; /* Set the height of each carousel cell */
     margin-right: 10px; /* Set the spacing between carousel cells */
-    background-color: #ccc; /* Set the background color of carousel cells */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
     font-size: 24px;
+    }
+
+    .carousel-cell .thumbnail {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        line-height: 150px;
+        font-size: 24px;
+
+    }
+    .carousel-cell .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
     }
     </style>
 </head>
@@ -25,15 +48,29 @@
 <body>
 
 <div class="carousel">
-    <div class="carousel-cell"><img src="images/parkeryoung.jpeg"></div>
-    <div class="carousel-cell"><img src="images/leftwich.jpeg"></div>
-    <div class="carousel-cell"><img src="images/katiefriedman.jpeg"></div>
+    <div class="carousel-cell">
+        <div class="thumbnail">
+            <img src="images/parkeryoung.jpeg">
+        </div>
+    </div>
+    <div class="carousel-cell">
+        <div class="thumbnail">
+            <img src="images/leftwich.jpeg">
+        </div>
+    </div>
+    <div class="carousel-cell">
+        <div class="thumbnail">
+            <img src="images/katiefriedman.jpeg">
+        </div>
+    </div>
 </div>
 <!--- carousel 1--->
 
-<script src="https://cdn.jsdelivr.net/npm/flickity@2.2.2/dist/flickity.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flickity@2.2.2/dist/flickity.pkgd.min.js?v=1"></script>
 <script>
-    var flkty = new Flickity('.carousel');
+    window.onload = function() {
+        var flkty = new Flickity('.carousel');
+    };
 </script>
 
 </body>
