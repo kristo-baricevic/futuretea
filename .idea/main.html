@@ -42,6 +42,8 @@
         object-fit: cover;
         border-radius: 50%;
     }
+
+    /* Nav Bar */
     header {
         background-color: #333;
         color: #fff;
@@ -73,11 +75,50 @@
     .logo{
         height: 40px;
     }
+
+    /* Product List */
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .product-item {
+        flex: 0 0 calc(33.33% - 20px);
+        background-color: #f9f9f9;
+        padding: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+    .product-item:last-child {
+        margin-right: 0;
+    }
+    .product-item a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+    }
+    .product-item img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .product-item h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .product-item .price {
+        font-weight: bold;
+        font-size: 14px;
+    }
     </style>
 </head>
+
 <body>
 
-<!--navbar-->
 <header>
     <nav>
         <div>
@@ -107,6 +148,7 @@
         </div>
     </nav>
 </header>
+<!--navbar-->
 
 <div class="carousel">
     <div class="carousel-cell">
@@ -126,6 +168,52 @@
     </div>
 </div>
 <!--- carousel 1--->
+
+<ul class="product-list">
+    <li class="product-item">
+        <a href="https://futuretensebooks.com/product/parker-young/">
+            <img src="https://futuretensebooks.com/wp-content/uploads/2023/04/Parker-Young-Cover-Final-copy-400x659.png" alt="Cheap Therapist Says You’re Insane by Parker Young">
+            <h2>Cheap Therapist Says You’re Insane by Parker Young</h2>
+            <span class="price">$15.00</span>
+        </a>
+    </li>
+    <li class="product-item">
+        <a href="https://futuretensebooks.com/product/foreign-body/">
+            <img src="https://futuretensebooks.com/wp-content/uploads/2022/10/FOREIGN-BODY-FRONT-COVER10.22.22-400x571.jpeg" alt="Cheap Therapist Says You’re Insane by Parker Young">
+            <h2>Foreign Body by Katie Gene Friedman</h2>
+            <span class="price">$15.00</span>
+        </a>
+    </li>
+    <li class="product-item">
+        <a href="https://futuretensebooks.com/product/aura/">
+            <img src="https://futuretensebooks.com/wp-content/uploads/2022/04/AuraCover-1-400x599.jpeg">
+            <h2>Cheap Therapist Says You’re Insane by Parker Young</h2>
+            <span class="price">$15.00</span>
+        </a>
+    </li>
+    <li class="product-item">
+        <a href="https://futuretensebooks.com/product/small-moods/">
+            <img width="400" height="617" src="https://futuretensebooks.com/wp-content/uploads/2021/11/Small_Moods_Final_Cover-400x617.jpg">
+            <h2>Cheap Therapist Says You’re Insane by Parker Young</h2>
+            <span class="price">$15.00</span>
+        </a>
+    </li>
+    <li class="product-item">
+        <a href="https://futuretensebooks.com/product/runaways-hardcover/" >
+            <img width="400" height="560" src="https://futuretensebooks.com/wp-content/uploads/2021/07/RunawaysCoverFinal-400x560.jpg">
+            <h2>Cheap Therapist Says You’re Insane by Parker Young</h2>
+            <span class="price">$15.00</span>
+        </a>
+    </li>
+    <li class="product-item">
+        <a href="https://futuretensebooks.com/product/prado/">
+            <img src="https://futuretensebooks.com/wp-content/uploads/2021/04/FFF_4-400x600.png">
+            <h2>Cheap Therapist Says You’re Insane by Parker Young</h2>
+            <span class="price">$15.00</span>
+        </a>
+    </li>
+</ul>
+<!--product list-->
 
 <script src="https://cdn.jsdelivr.net/npm/flickity@2.2.2/dist/flickity.pkgd.min.js?v=1"></script>
 <script>
