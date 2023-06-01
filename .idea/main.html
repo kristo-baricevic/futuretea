@@ -5,21 +5,31 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flickity@2.2.2/dist/flickity.min.css" />
     <style>
+    .section-title {
+        font-family: Oswald;
+        color: black;
+        font-size: 36px;
+    }
+
     /* Custom styles for the carousel */
+    .carousel-container {
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
     .carousel {
-    height: 200px;
+        height: 200px;
     }
 
     .carousel-cell {
-    position: relative;
-    width: 33.33%;
-    height: 200px; /* Set the height of each carousel cell */
-    margin-right: 10px; /* Set the spacing between carousel cells */
-    background-color: white;
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
-    font-size: 24px;
+        position: relative;
+        width: 33.33%;
+        height: 200px; /* Set the height of each carousel cell */
+        margin-right: 10px; /* Set the spacing between carousel cells */
+        background-color: #f5f5f5;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        font-size: 24px;
     }
 
     .carousel-cell .thumbnail {
@@ -100,7 +110,8 @@
         text-decoration: none;
         color: #333;
     }
-    .product-item img {
+
+    .product-item img, .book-cover {
         width: 100%;
         height: auto;
         margin-bottom: 10px;
@@ -152,7 +163,7 @@
 
 <div>
     <div>
-        <h1>New Releases</h1>
+        <h1 class="section-title">New Releases</h1>
     </div>
     <div>
         <hr>
@@ -160,29 +171,30 @@
 </div>
 <!-- new releases title -->
 
-<div class="carousel">
-    <div class="carousel-cell">
-        <div class="thumbnail">
-            <img src="images/parkeryoung.jpeg">
+<div class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-cell">
+            <div class="thumbnail">
+                <img src="images/parkeryoung.jpeg">
+            </div>
         </div>
-    </div>
-    <div class="carousel-cell">
-        <div class="thumbnail">
-            <img src="images/leftwich.jpeg">
+        <div class="carousel-cell">
+            <div class="thumbnail">
+                <img src="images/leftwich.jpeg">
+            </div>
         </div>
-    </div>
-    <div class="carousel-cell">
-        <div class="thumbnail">
-            <img src="images/katiefriedman.jpeg">
+        <div class="carousel-cell">
+            <div class="thumbnail">
+                <img src="images/katiefriedman.jpeg">
+            </div>
         </div>
     </div>
 </div>
 <!--- new releases carousel --->
 
 <div>
-
     <div>
-        <h1>Catalog</h1>
+        <h1 class="section-title">Catalog</h1>
     </div>
     <div>
         <hr>
@@ -193,43 +205,43 @@
 <ul class="product-list">
     <li class="product-item">
         <a href="https://futuretensebooks.com/product/parker-young/">
-            <img src="https://futuretensebooks.com/wp-content/uploads/2023/04/Parker-Young-Cover-Final-copy-400x659.png" alt="Cheap Therapist Says You’re Insane by Parker Young">
+            <img class="book-cover" src="https://futuretensebooks.com/wp-content/uploads/2023/04/Parker-Young-Cover-Final-copy-400x659.png" alt="Cheap Therapist Says You’re Insane by Parker Young">
             <h2>Cheap Therapist Says You’re Insane by Parker Young</h2>
             <span class="price">$15.00</span>
         </a>
     </li>
     <li class="product-item">
         <a href="https://futuretensebooks.com/product/foreign-body/">
-            <img src="https://futuretensebooks.com/wp-content/uploads/2022/10/FOREIGN-BODY-FRONT-COVER10.22.22-400x571.jpeg" alt="Cheap Therapist Says You’re Insane by Parker Young">
+            <img class="book-cover" src="https://futuretensebooks.com/wp-content/uploads/2022/10/FOREIGN-BODY-FRONT-COVER10.22.22-400x571.jpeg" alt="Cheap Therapist Says You’re Insane by Parker Young">
             <h2>Foreign Body by Katie Gene Friedman</h2>
             <span class="price">$15.00</span>
         </a>
     </li>
     <li class="product-item">
         <a href="https://futuretensebooks.com/product/aura/">
-            <img src="https://futuretensebooks.com/wp-content/uploads/2022/04/AuraCover-1-400x599.jpeg">
-            <h2>Cheap Therapist Says You’re Insane by Parker Young</h2>
+            <img class="book-cover" src="https://futuretensebooks.com/wp-content/uploads/2022/04/AuraCover-1-400x599.jpeg">
+            <h2>Aura by Hillary Leftwich</h2>
             <span class="price">$15.00</span>
         </a>
     </li>
     <li class="product-item">
         <a href="https://futuretensebooks.com/product/small-moods/">
-            <img width="400" height="617" src="https://futuretensebooks.com/wp-content/uploads/2021/11/Small_Moods_Final_Cover-400x617.jpg">
-            <h2>Cheap Therapist Says You’re Insane by Parker Young</h2>
+            <img class="book-cover" src="https://futuretensebooks.com/wp-content/uploads/2021/11/Small_Moods_Final_Cover-400x617.jpg">
+            <h2>Small Moods by Shane Kowalski</h2>
             <span class="price">$15.00</span>
         </a>
     </li>
     <li class="product-item">
         <a href="https://futuretensebooks.com/product/runaways-hardcover/" >
-            <img width="400" height="560" src="https://futuretensebooks.com/wp-content/uploads/2021/07/RunawaysCoverFinal-400x560.jpg">
-            <h2>Cheap Therapist Says You’re Insane by Parker Young</h2>
+            <img class="book-cover" src="https://futuretensebooks.com/wp-content/uploads/2021/07/RunawaysCoverFinal-400x560.jpg">
+            <h2>Runaway by Michael J Seidlinger</h2>
             <span class="price">$15.00</span>
         </a>
     </li>
     <li class="product-item">
         <a href="https://futuretensebooks.com/product/prado/">
-            <img src="https://futuretensebooks.com/wp-content/uploads/2021/04/FFF_4-400x600.png">
-            <h2>Cheap Therapist Says You’re Insane by Parker Young</h2>
+            <img class="book-cover" src="https://futuretensebooks.com/wp-content/uploads/2021/04/FFF_4-400x600.png">
+            <h2>Essays by Emilly Prado</h2>
             <span class="price">$15.00</span>
         </a>
     </li>
