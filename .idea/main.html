@@ -110,11 +110,20 @@
         text-decoration: none;
         color: #333;
     }
-
-    .product-item img, .book-cover {
+    .product-item .thumbnail-wrapper {
         width: 100%;
-        height: auto;
-        margin-bottom: 10px;
+        height: 0;
+        padding-bottom: 100%; /* Maintain a square aspect ratio */
+        position: relative;
+    }
+    .product-item .thumbnail-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
     }
 
     .product-item h2 {
@@ -205,42 +214,54 @@
 <ul class="product-list">
     <li class="product-item">
         <a href="https://futuretensebooks.com/product/parker-young/">
-            <img class="book-cover" src="https://futuretensebooks.com/wp-content/uploads/2023/04/Parker-Young-Cover-Final-copy-400x659.png" alt="Cheap Therapist Says You’re Insane by Parker Young">
+            <div class="thumbnail-wrapper">
+                <img class="thumbnail-image" src="https://futuretensebooks.com/wp-content/uploads/2023/04/Parker-Young-Cover-Final-copy-400x659.png" alt="Cheap Therapist Says You’re Insane by Parker Young">
+            </div>
             <h2>Cheap Therapist Says You’re Insane by Parker Young</h2>
             <span class="price">$15.00</span>
         </a>
     </li>
     <li class="product-item">
         <a href="https://futuretensebooks.com/product/foreign-body/">
-            <img class="book-cover" src="https://futuretensebooks.com/wp-content/uploads/2022/10/FOREIGN-BODY-FRONT-COVER10.22.22-400x571.jpeg" alt="Cheap Therapist Says You’re Insane by Parker Young">
+            <div class="thumbnail-wrapper">
+                <img class="thumbnail-image" src="https://futuretensebooks.com/wp-content/uploads/2022/10/FOREIGN-BODY-FRONT-COVER10.22.22-400x571.jpeg" alt="Cheap Therapist Says You’re Insane by Parker Young">
+            </div>
             <h2>Foreign Body by Katie Gene Friedman</h2>
             <span class="price">$15.00</span>
         </a>
     </li>
     <li class="product-item">
         <a href="https://futuretensebooks.com/product/aura/">
-            <img class="book-cover" src="https://futuretensebooks.com/wp-content/uploads/2022/04/AuraCover-1-400x599.jpeg">
+            <div class="thumbnail-wrapper">
+                <img class="thumbnail-image" src="https://futuretensebooks.com/wp-content/uploads/2022/04/AuraCover-1-400x599.jpeg">
+            </div>
             <h2>Aura by Hillary Leftwich</h2>
             <span class="price">$15.00</span>
         </a>
     </li>
     <li class="product-item">
         <a href="https://futuretensebooks.com/product/small-moods/">
-            <img class="book-cover" src="https://futuretensebooks.com/wp-content/uploads/2021/11/Small_Moods_Final_Cover-400x617.jpg">
+            <div class="thumbnail-wrapper">
+                <img class="thumbnail-image" src="https://futuretensebooks.com/wp-content/uploads/2021/11/Small_Moods_Final_Cover-400x617.jpg">
+            </div>
             <h2>Small Moods by Shane Kowalski</h2>
             <span class="price">$15.00</span>
         </a>
     </li>
     <li class="product-item">
         <a href="https://futuretensebooks.com/product/runaways-hardcover/" >
-            <img class="book-cover" src="https://futuretensebooks.com/wp-content/uploads/2021/07/RunawaysCoverFinal-400x560.jpg">
+            <div class="thumbnail-wrapper" class="thumbnail-wrapper">
+                <img class="thumbnail-image" src="https://futuretensebooks.com/wp-content/uploads/2021/07/RunawaysCoverFinal-400x560.jpg">
+            </div>
             <h2>Runaway by Michael J Seidlinger</h2>
             <span class="price">$15.00</span>
         </a>
     </li>
     <li class="product-item">
         <a href="https://futuretensebooks.com/product/prado/">
-            <img class="book-cover" src="https://futuretensebooks.com/wp-content/uploads/2021/04/FFF_4-400x600.png">
+            <div class="thumbnail-wrapper" class="thumbnail-wrapper">
+                <img class="thumbnail-image" src="https://futuretensebooks.com/wp-content/uploads/2021/04/FFF_4-400x600.png">
+            </div>
             <h2>Essays by Emilly Prado</h2>
             <span class="price">$15.00</span>
         </a>
