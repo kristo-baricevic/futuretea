@@ -17,13 +17,13 @@
         background-color: #f5f5f5;
     }
     .carousel {
-        height: 200px;
+        height: 220px;
     }
 
     .carousel-cell {
         position: relative;
         width: 33.33%;
-        height: 200px; /* Set the height of each carousel cell */
+        height: 220px; /* Set the height of each carousel cell */
         margin-right: 10px; /* Set the spacing between carousel cells */
         background-color: #f5f5f5;
         display: inline-block;
@@ -32,7 +32,7 @@
         font-size: 24px;
     }
 
-    .carousel-cell .thumbnail {
+    .carousel-cell .thumbnail-wrapper {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -44,13 +44,44 @@
         text-align: center;
         line-height: 150px;
         font-size: 24px;
-
     }
-    .carousel-cell .thumbnail img {
+    .carousel-cell .thumbnail-carousel-1 {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-position: left 20% bottom;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
+    }
+    .carousel-cell .thumbnail-carousel-2 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-size: cover;
+        background-position: center bottom;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
+    }
+    .carousel-cell .thumbnail-carousel-3 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-size: cover;
+        background-position: center bottom 30%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 4px rgba(0, 1, 1, 0.4);
     }
 
     /* Nav Bar */
@@ -98,7 +129,6 @@
         flex: 0 0 calc(33.33% - 20px);
         background-color: #f9f9f9;
         padding: 20px;
-        margin-right: 20px;
         margin-bottom: 20px;
         box-sizing: border-box;
     }
@@ -114,6 +144,7 @@
         width: 100%;
         height: 0;
         padding-bottom: 100%; /* Maintain a square aspect ratio */
+        justify-content: space-between;
         position: relative;
         overflow: hidden;
     }
@@ -123,9 +154,8 @@
         left: 50%;
         width: 100%;
         height: 100%;
-        background-image: url("your-image-url.jpg");
         background-size: cover;
-        background-position: center bottom 10%;
+        background-position: center top;
         border-radius: 10px;
         transform: translate(-50%, -50%);
     }
@@ -135,9 +165,8 @@
         left: 50%;
         width: 100%;
         height: 100%;
-        background-image: url("your-image-url.jpg");
         background-size: cover;
-        background-position: center bottom 10%;
+        background-position: center top 20%;
         border-radius: 10px;
         transform: translate(-50%, -50%);
     }
@@ -147,9 +176,8 @@
         left: 50%;
         width: 100%;
         height: 100%;
-        background-image: url("your-image-url.jpg");
         background-size: cover;
-        background-position: center bottom 10%;
+        background-position: center bottom 30%;
         border-radius: 10px;
         transform: translate(-50%, -50%);
     }
@@ -159,9 +187,8 @@
         left: 50%;
         width: 100%;
         height: 100%;
-        background-image: url("your-image-url.jpg");
         background-size: cover;
-        background-position: center bottom 10%;
+        background-position: center;
         border-radius: 10px;
         transform: translate(-50%, -50%);
     }
@@ -171,9 +198,8 @@
         left: 50%;
         width: 100%;
         height: 100%;
-        background-image: url("your-image-url.jpg");
         background-size: cover;
-        background-position: center bottom 10%;
+        background-position: center bottom 55%;
         border-radius: 10px;
         transform: translate(-50%, -50%);
     }
@@ -183,9 +209,8 @@
         left: 50%;
         width: 100%;
         height: 100%;
-        background-image: url("your-image-url.jpg");
         background-size: cover;
-        background-position: center bottom 10%;
+        background-position: center bottom 25%;
         border-radius: 10px;
         transform: translate(-50%, -50%);
     }
@@ -246,18 +271,18 @@
 <div class="carousel-container">
     <div class="carousel">
         <div class="carousel-cell">
-            <div class="thumbnail">
-                <img src="images/parkeryoung.jpeg">
+            <div class="thumbnail-wrapper">
+                <div class="thumbnail-carousel-1" style="background-image: url('https://futuretensebooks.com/wp-content/uploads/2023/04/Parker-Young-Cover-Final-copy-400x659.png')"></div>
             </div>
         </div>
         <div class="carousel-cell">
-            <div class="thumbnail">
-                <img src="images/leftwich.jpeg">
+            <div class="thumbnail-wrapper">
+                <div class="thumbnail-carousel-2" style="background-image: url('https://futuretensebooks.com/wp-content/uploads/2022/10/FOREIGN-BODY-FRONT-COVER10.22.22-400x571.jpeg')"></div>
             </div>
         </div>
         <div class="carousel-cell">
-            <div class="thumbnail">
-                <img src="images/katiefriedman.jpeg">
+            <div class="thumbnail-wrapper">
+                <div class="thumbnail-carousel-3" style="background-image: url('https://futuretensebooks.com/wp-content/uploads/2022/04/AuraCover-1-400x599.jpeg')"></div>
             </div>
         </div>
     </div>
@@ -335,10 +360,10 @@
 <script src="https://cdn.jsdelivr.net/npm/flickity@2.2.2/dist/flickity.pkgd.min.js?v=1"></script>
 <script>
     window.onload = function() {
-        var flkty = new Flickity('.carousel');
+        var flkty = new Flickity('.carousel', {
+            initialIndex: 1
+        });
     };
 </script>
-
 </body>
-
 </html>
